@@ -1,0 +1,26 @@
+{
+  "name": "elastic-search-parser",
+  "version": "1.0.0",
+  "description": "parse search results",
+  "main": "index.js",
+  "scripts": {
+    "start": "node lib/index.js",
+    "babel": "./node_modules/.bin/babel src --out-dir lib --source-maps "
+  },
+  "author": "jeff",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.1",
+    "@babel/preset-env": "^7.0.0"
+  },
+  "babel": {
+    "presets": [
+      [ "@babel/preset-env", {
+        "targets": {
+          "node": 8
+        }
+      } ]
+    ]
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "took": 119,
+  "timed_out": false,
+  "num_reduce_phases": 4,
+  "_shards": {
+    "total": 2011,
+    "successful": 2011,
+    "skipped": 0,
+    "failed": 0
+  },
+  "hits": {
+    "total": 1336,
+    "max_score": 3.6270041,
+    "hits": [
+      {
+        "_index": "logstash-test-2018.09.12",
+        "_type": "logs",
+        "_id": "AWXLPq7EnjGrKI3gLF8x",
+        "_score": 3.6270041,
+        "_source": {
+          "name": "Node JS Customer",
+          "hostname": "test",
+          "pid": 31369,
+          "req_id": "4f0f0630-b625-11e8-b577-3d3de19e55d2",
+          "level": "info",
+          "res": {
+            "statusCode": 404,
+            "header": "HTTP/1.1 200 OK\r\nX-DNS-Prefetch-Control: off\r\nX-Frame-Options: SAMEORIGIN\r\nStrict-Transport-Security: max-age=15552000; includeSubDomains\r\nX-Download-Options: noopen\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nX-Request-Id: 4f0f0630-b625-11e8-b577-3d3de19e55d2\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 67\r\nETag: W/\"43-jpfMMVz4BMQf6OBEcBqxN2w+KCU\"\r\nDate: Wed, 12 Sep 2018 00:46:47 GMT\r\nConnection: keep-alive\r\n\r\n"
+          },
+          "duration": 8223.761774,
+          "req": {
+            "method": "POST",
+            "url": "/",
+            "headers": {
+              "connection": "upgrade",
+              "host": "test.example.com",
+              "x-frame-options": "SAMEORIGIN",
+              "x-content-type-options": "nosniff",
+              "x-xss-protection": "1; mode=block",
+              "strict-transport-security": "max-age=31536000; includeSubDomains;",
+              "content-length": "35984",
+              "authorization": null,
+              "content-type": "text/xml",
+              "saml": "<Assertion ID=\"_23bf1059-f2fa-495d-a4d5-765d3aeeb1b1\" />",
+              "cache-control": "no-cache",
+              "postman-token": "d8731c9d-cd3d-4ea2-9b79-f8633d487ded",
+              "user-agent": "PostmanRuntime/7.3.0",
+              "accept": "*/*",
+              "accept-encoding": "gzip, deflate"
+            },
+            "remoteAddress": "::ffff:127.0.0.1",
+            "remotePort": 12123
+          },
+          "user": {
+            "id": 1,
+            "organizationId": 1,
+            "isAdmin": false,
+            "isSuperuser": false,
+            "isSystemUser": false
+          },
+          "originalUrl": "/api/v1/TEST",
+          "timestamps": {
+            "entryTimestamp": 1536713199123,
+            "exitTimestamp": 1536713207339,
+            "internalProcessing": 941
+          },
+          "req_body": "<TestXml>\r\n\t<Message id=\"123\">Extract Me</Message>\r\n</TestXml>",
+          "v": 0,
+          "@timestamp": "2018-09-12T00:46:47.347Z",
+          "message": "request finish"
+        }
+      }
+    ]
+  }
+}

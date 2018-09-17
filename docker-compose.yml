@@ -1,0 +1,5 @@
+version: '3'
+services:
+  elastic-search-parser:
+    build: .
+    image: langboost/elastic-search-parser
