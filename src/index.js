@@ -2,7 +2,7 @@ const fs = require('fs')
 const { promisify } = require("util")
 const writeFile = promisify(fs.writeFile)
 
-const inputFilePath = 'elastic-search.json'
+const inputFilePath = 'in/elastic-search.json'
 main()
 
 async function main() {
@@ -15,7 +15,7 @@ async function main() {
 
   let acordXmlAsync = xmlCleanup(filterByRegex(chunksToLines(inputReadStream), acordXmlFilter))
   for await (const acordXmlStr of acordXmlAsync) {
-    let fileName = `elastic-search-req-body${count++}.xml`
+    let fileName = `out/elastic-search-req-body${count++}.xml`
     console.log(fileName)
     // fire-and-forget, but report exceptions
     await writeFile(fileName, acordXmlStr, { encoding: 'utf8' })

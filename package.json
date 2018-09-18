@@ -4,7 +4,8 @@
   "description": "parse search results",
   "main": "index.js",
   "scripts": {
-    "start": "node lib/index.js",
+    "start": "docker-compose up",
+    "docker_start": "node lib/index.js",
     "babel": "./node_modules/.bin/babel src --out-dir lib --source-maps "
   },
   "author": "jeff",
@@ -18,7 +19,7 @@
     "presets": [
       [ "@babel/preset-env", {
         "targets": {
-          "node": 8
+          "node": 10
         }
       } ]
     ]

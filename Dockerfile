@@ -1,16 +1,18 @@
-# node:8-slim fails with "TypeError: Object is not async iterable"
-# node:10-slim works
-FROM node:8-slim
+FROM node:10-slim
 
 ENV NODE_ENV dev
 EXPOSE 3000
+
+VOLUME /home/node/in
+VOLUME /home/node/out
+
 WORKDIR /home/node
 
 COPY package*.json ./
-RUN yarn install --production=false
+COPY yarn.lock yarn.lock
+RUN yarn install
 
-COPY elastic-search.json elastic-search.json
 COPY src src
 RUN yarn run babel
 
-CMD yarn run start
+CMD yarn run docker_start

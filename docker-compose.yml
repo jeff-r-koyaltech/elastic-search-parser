@@ -3,3 +3,6 @@ services:
   elastic-search-parser:
     build: .
     image: langboost/elastic-search-parser
+    volumes:
+      - "./in:/home/node/in"
+      - "./out:/home/node/out"
